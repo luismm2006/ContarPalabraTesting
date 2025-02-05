@@ -5,7 +5,7 @@ public class ContarPalabra {
 
 	// Método para contar el número de palabras en una cadena
 	public static int contarPalabras(String str) {
-		if (str == null || str.trim().isEmpty()) {
+		if (str == null || str.trim().isEmpty()) { //Corrección, poniendole .trim() antes del .isEmpty
 			return 0;
 		}
 		str = str.trim();
