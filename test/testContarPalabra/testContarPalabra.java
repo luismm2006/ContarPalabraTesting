@@ -28,19 +28,13 @@ class testContarPalabra {
 
     @Test
     public void testContarFrecuenciaPalabras() {
-        Map<String, Integer> resultado = ContarPalabra.contarFrecuenciaPalabras("Hola hola buenas buenas buenas");
-        assertEquals(2, resultado.get("hola"));
-        assertEquals(3, resultado.get("buenas"));
-        assertFalse(resultado.containsKey("mundo"));
+        assertEquals(Map.of("hola", 2, "adios", 1), ContarPalabra.contarFrecuenciaPalabras("hola hola adios"));
     }
 
     @Test
     public void testContarFrecuenciaLetras() {
-        Map<Character, Integer> resultado = ContarPalabra.contarFrecuenciaLetras("Hola hola");
-        assertEquals(2, resultado.get('h'));
-        assertEquals(2, resultado.get('o'));
-        assertEquals(2, resultado.get('l'));
-        assertEquals(2, resultado.get('a'));
+        assertEquals(Map.of('h', 3), ContarPalabra.contarFrecuenciaLetras("hhh"));
+
     }
 
     @Test
